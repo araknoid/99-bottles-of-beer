@@ -5,26 +5,44 @@ import static java.util.stream.IntStream.iterate;
 
 public class BeerSong
 {
-  public String verse(int verse)
+  public String verse(int number)
   {
-    if (verse == 2)
-    {
-      return "2 bottles of beer on the wall, 2 bottles of beer.\n"
-          + "Take one down and pass it around, 1 bottle of beer on the wall.\n";
-    }
-    if (verse == 1)
-    {
-      return "1 bottle of beer on the wall, 1 bottle of beer.\n"
-          + "Take it down and pass it around, no more bottles of beer on the wall.\n";
-    }
-    if (verse == 0)
-    {
-      return "No more bottles of beer on the wall, no more bottles of beer.\n"
-          + "Go to the store and buy some more, 99 bottles of beer on the wall.";
-    }
+    return capitalize(quantity(number)) + " " + container(number) + " of beer on the wall, " + quantity(number) + " " + container(number) + " of beer.\n"
+        + action(number) +", " + quantity(number - 1) + " " + container(number - 1) + " of beer on the wall.\n";
+  }
 
-    return verse + " bottles of beer on the wall, " + verse + " bottles of beer.\n"
-        + "Take one down and pass it around, " + (verse - 1) + " bottles of beer on the wall.\n";
+  private String action(int number) {
+    if(number == 0)
+      return "Go to the store and buy some more";
+
+    return "Take " + pronoun(number) + " down and pass it around";
+  }
+
+  private String capitalize(String string) {
+    return string.substring(0,1).toUpperCase()+string.substring(1);
+  }
+
+  private String quantity(int number) {
+    if (number == 0)
+      return "no more";
+    if(number == -1)
+      return "99";
+
+    return number+"";
+  }
+
+  private String pronoun(int number) {
+    if(number == 1)
+      return "it";
+
+    return "one";
+  }
+
+  private String container(int number)
+  {
+    if (number == 1)
+      return "bottle";
+    return "bottles";
   }
 
   public String verses(int from, int to)
