@@ -2,7 +2,11 @@
 # 99 Bottles of Beer on the Wall
 
 ## Shameless Green :green_heart:
+Within Test Driven Development, **Shameless Green** is a solution that quickly reaches green prioritising understandability over changeability.
 
+It’s also a solution easy to write.
+
+This kind of solution tolerate duplication since following tests or feature will add more details that will make easier to improve the code.
 
 ## Let's start... :dart:
 
