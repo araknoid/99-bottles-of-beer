@@ -6,13 +6,13 @@ Within Test Driven Development, **Shameless Green** is a solution that quickly r
 
 It’s also a solution easy to write.
 
-This kind of solution tolerate duplication since following tests or feature will add more details that will make easier to improve the code.
+This kind of solution tolerates duplication since following tests or feature will add more details that will make easier to improve the code.
 
 ## Let's start... :dart:
 
- 1. Using TDD, write a **Shameless Green:green_heart:** solution that produces in output the song
- 2. Refactor the **Shameless Green:green_heart:** solution removing as much duplication as you possibly can
-3. Once refactored, do you have a lot of conditionals? Try replacing the conditionals with polymorphism.
+ 1. Using TDD, write a **Shameless Green:green_heart:** solution (do it incrementally) that produces in output the song
+ 2. Refactor the **Shameless Green:green_heart:** solution removing as much duplication as you possibly can. To push this further, introduce domain's concepts.
+ 3. Once refactored, do you have a lot of conditionals? Try replacing the conditionals with polymorphism.
 
 ## The song :beer::beer:
 
